@@ -2,6 +2,7 @@ function Event() {
   this.idNumber = null
   this.coordinates = null
   this.tickets = []
+  this.generateTickets();
 }
 
 Event.prototype.generateTickets = function () {

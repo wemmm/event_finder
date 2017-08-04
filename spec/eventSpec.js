@@ -16,12 +16,11 @@ describe('Event', function(){
   });
 
   it('has an array for tickets', function(){
-    expect(event.tickets).toEqual([])
+    expect(event.tickets).toBeDefined()
   });
 
   it('can generate between one and twenty tickets and store them', function(){
-    event.generateTickets();
-    expect(event.tickets.length).toBeGreaterThan(1)
+    expect(event.tickets.length).toBeGreaterThan(0)
     expect(event.tickets.length).toBeLessThan(21)
   });
 })
