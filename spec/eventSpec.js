@@ -4,11 +4,11 @@ describe('Event', function(){
   var event;
 
   beforeEach(function(){
-    event = new Event();
+    event = new Event(1);
   });
 
   it('has an ID number', function(){
-    expect(event.idNumber).toEqual(null)
+    expect(event.idNumber).toEqual(1)
   });
 
   it('has coordinates', function(){

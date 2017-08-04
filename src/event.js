@@ -1,5 +1,5 @@
-function Event() {
-  this.idNumber = null
+function Event(idNumber) {
+  this.idNumber = idNumber
   this.coordinates = null
   this.tickets = []
   this.generateTickets();
