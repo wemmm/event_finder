@@ -8,6 +8,6 @@ describe('Ticket', function(){
   });
 
   it('has a price', function(){
-    expect(ticket.price).toEqual(null)
+    expect(ticket.price).toBeLessThan(50)
   });
 })
