@@ -7,7 +7,8 @@ describe('Ticket', function(){
     ticket = new Ticket();
   });
 
-  it('has a price', function(){
+  it('has a price between zero and fifty', function(){
     expect(ticket.price).toBeLessThan(50)
+    expect(ticket.price).toBeGreaterThan(0)
   });
 })
