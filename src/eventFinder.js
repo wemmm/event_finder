@@ -1,6 +1,7 @@
 function EventFinder() {
-  this.TOTAL_EVENTS = 10
-  this.events = []
+  this.TOTAL_EVENTS = 10;
+  this.events = [];
+  this.world = new World;
   this.generateEvents();
 }
 

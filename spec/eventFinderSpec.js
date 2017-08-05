@@ -11,6 +11,10 @@ describe('EventFinder', function(){
     expect(eventFinder.events).toBeDefined();
   });
 
+  it('has a world object', function(){
+    expect(eventFinder.world).toBeDefined();
+  });
+
   it('generates events and stores them at instantiation', function(){
     expect(eventFinder.events.length).toBeGreaterThan(0)
     expect(eventFinder.events.length).toBeLessThan(11)
