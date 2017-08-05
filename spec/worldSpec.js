@@ -7,7 +7,7 @@ describe('World', function(){
     world = new World();
   });
 
-  it('has an array for a grid', function(){
-    expect(world.grid).toEqual([]);
+  it('stores a 2D array at instantiation', function(){
+    expect(world.grid.length).toEqual(20);
   });
 })
