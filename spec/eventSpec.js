@@ -23,4 +23,11 @@ describe('Event', function(){
     expect(event.tickets.length).toBeGreaterThan(0)
     expect(event.tickets.length).toBeLessThan(21)
   });
+
+  it('can return the cheapest ticket of the randomly generated set', function(){
+    var cheapTicket = event.getCheapestTicket()
+    expect(cheapTicket instanceof Ticket).toBeTrue
+    expect(cheapTicket.price).toBeGreaterThan(0)
+    expect(cheapTicket.price).toBeLessThan(50)
+  });
 })

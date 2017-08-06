@@ -11,3 +11,15 @@ Event.prototype.generateTickets = function () {
     this.tickets.push(new Ticket);
   };
 };
+
+Event.prototype.getCheapestTicket = function () {
+  var ticketsSortedByPrice = this.tickets;
+  ticketsSortedByPrice.sort(function(a,b) {
+    if (a.price < b.price)
+      return -1;
+    if (a.price > b.price)
+      return 1;
+    return 0;
+  });
+  return ticketsSortedByPrice[0]
+};
