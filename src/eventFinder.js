@@ -1,13 +1,17 @@
 function EventFinder() {
   this.TOTAL_EVENTS = 10;
   this.world = new World;
+  this.eventCoordinates = [];
   this.generateEvents();
 }
 
 EventFinder.prototype.generateEvents = function () {
   var times = this.TOTAL_EVENTS
   for(var i=0; i < times; i++){
-    this.world.grid[this.randomXCoordinate()][this.randomYCoordinate()] = new Event(i + 1);
+    var x = this.randomXCoordinate()
+    var y = this.randomYCoordinate()
+    this.eventCoordinates.push([x, y])
+    this.world.grid[x][y] = new Event(i + 1);
   };
 };
 
