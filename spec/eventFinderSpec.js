@@ -19,4 +19,9 @@ describe('EventFinder', function(){
   it('stores generated X and Y coordinates', function(){
     expect(eventFinder.eventCoordinates.length).toEqual(10)
   });
+
+  it('takes user coordinates as argument and stores them', function(){
+    eventFinder.getUserCoordinates(0, 0)
+    expect(eventFinder.userCoordinates).toEqual([0, 0])
+  });
 })

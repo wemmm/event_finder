@@ -2,6 +2,7 @@ function EventFinder() {
   this.TOTAL_EVENTS = 10;
   this.world = new World;
   this.eventCoordinates = [];
+  this.userCoordinates = null;
   this.generateEvents();
 }
 
@@ -21,4 +22,8 @@ EventFinder.prototype.randomXCoordinate = function () {
 
 EventFinder.prototype.randomYCoordinate = function () {
   return Math.floor(Math.random()*this.world.Y_AXIS-1+1)
+};
+
+EventFinder.prototype.getUserCoordinates = function (x, y) {
+  this.userCoordinates = [x, y]
 };
