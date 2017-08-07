@@ -11,7 +11,7 @@ EventFinder.prototype.generateEvents = function () {
   for(var i=0; i < times; i++){
     var x = this.randomXCoordinate()
     var y = this.randomYCoordinate()
-    this.eventCoordinates.push([x, y])
+    this.eventCoordinates.push({'eventNumber': x +y, 'coordinates': [x, y]})
     this.world.grid[x][y] = new Event(i + 1);
   };
 };
@@ -27,3 +27,11 @@ EventFinder.prototype.randomYCoordinate = function () {
 EventFinder.prototype.getUserCoordinates = function (x, y) {
   this.userCoordinates = [x, y]
 };
+
+EventFinder.prototype.returnEvent = function (x, y) {
+  return this.world.grid[x][y]
+};
+
+// EventFinder.prototype.returnNearestEvents = function () {
+//
+// };
