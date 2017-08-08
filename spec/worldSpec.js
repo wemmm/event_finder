@@ -7,7 +7,8 @@ describe('World', function(){
     world = new World();
   });
 
-  it('stores a 2D array at instantiation', function(){
-    expect(world.grid.length).toEqual(20);
+  it('stores the maximum X and Y axes', function(){
+    expect(world.X_AXIS).toEqual(20);
+    expect(world.X_AXIS).toEqual(20);
   });
 })

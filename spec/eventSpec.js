@@ -11,10 +11,6 @@ describe('Event', function(){
     expect(event.idNumber).toEqual(1)
   });
 
-  it('has coordinates', function(){
-    expect(event.coordinates).toEqual(null)
-  });
-
   it('has an array for tickets', function(){
     expect(event.tickets).toBeDefined()
   });
