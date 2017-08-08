@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Assistant');
+
+html {
+  background: #02AAB0;
+  background: -webkit-linear-gradient(to right, #00CDAC, #02AAB0);
+  background: linear-gradient(to right, #00CDAC, #02AAB0);
+}
+
+h1 {
+  font-family: Pacifico;
+  color: white;
+  font-size: 50px;
+  margin: 0;
+}
+
+h3 {
+  font-family: Assistant;
+  color: white;
+}
+.mainheader {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.wrapper {
+
+  text-align: center;
+  align-items: center;
+  left: 10%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 10px;
+  color: #444;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  height: 150px;
+}

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
     <title>EventFinder</title>
   </head>
   <body>
-
-    <h1>Welcome to EventFinder!</h1>
+  <div class="mainheader">
+    <h1>EventFinder</h1>
 
     <h3 id="locationstatus">Where are you?</h3>
 
@@ -58,10 +60,19 @@
     <option value="19">19</option>
     <option value="20">20</option>
   </select>
-
   <button id="submitcoords" type="button" name="button">Submit</button><br>
-
   <br><button id="findevents" type="button" name="button">Find my nearest events!</button>
+  </div>
+
+  <br>
+  <div class="wrapper">
+  <div id="firstevent" class="box a"></div>
+  <div id="secondevent" class="box b"></div>
+  <div id="thirdevent" class="box c"></div>
+  <div id="fourthevent" class="box d"></div>
+  <div id="fifthevent" class="box e"></div>
+  <div id="sixthevent" class="box f"></div>
+  </div>
 
   </body>
 
