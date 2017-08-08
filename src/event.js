@@ -21,5 +21,5 @@ Event.prototype.getCheapestTicket = function () {
       return 1;
     return 0;
   });
-  return ticketsSortedByPrice[0]
+  return ticketsSortedByPrice[0].price
 };

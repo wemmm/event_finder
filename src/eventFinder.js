@@ -11,8 +11,8 @@ EventFinder.prototype.generateEvents = function () {
   for(var i=0; i < times; i++){
     var x = this.randomXCoordinate()
     var y = this.randomYCoordinate()
-    this.eventCoordinates.push({'eventNumber': x +y, 'coordinates': [x, y]})
-    this.world.grid[x][y] = new Event(i + 1);
+    var event = new Event(i + 1)
+    this.eventCoordinates.push({'event': event, 'coordinateTotal': x + y, 'coordinates': [x, y]})
   };
 };
 
@@ -28,10 +28,26 @@ EventFinder.prototype.getUserCoordinates = function (x, y) {
   this.userCoordinates = [x, y]
 };
 
-EventFinder.prototype.returnEvent = function (x, y) {
-  return this.world.grid[x][y]
+EventFinder.prototype.closestEvents = function () {
+  var events = this.eventCoordinates;
+  var userCoordinateTotal = this.userCoordinates[0] + this.userCoordinates[1];
+  events.sort(function(a,b) {
+    if ((a.coordinateTotal - userCoordinateTotal) < (b.coordinateTotal - userCoordinateTotal))
+      return -1;
+    if ((a.coordinateTotal - userCoordinateTotal) > (b.coordinateTotal - userCoordinateTotal))
+      return 1;
+    return 0;
+  });
+    this.eventCoordinates = events.splice(-5, 5)
 };
 
-// EventFinder.prototype.returnNearestEvents = function () {
-//
-// };
+EventFinder.prototype.returnEventList = function () {
+  var events = this.eventCoordinates
+  var userCoordinateTotal = this.userCoordinates[0] + this.userCoordinates[1];
+  var formattedEvents = events.map(function(x) {
+    return `Event 00${x.event.idNumber}
+    Out of ${x.event.tickets.length} available tickets, the cheapest one is $${x.event.getCheapestTicket()}.
+    Its distance from you is ${Math.abs(x.coordinateTotal - userCoordinateTotal)}`
+  });
+    return formattedEvents
+};

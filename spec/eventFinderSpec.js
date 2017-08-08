@@ -5,6 +5,7 @@ describe('EventFinder', function(){
 
   beforeEach(function(){
     eventFinder = new EventFinder();
+    eventFinder.getUserCoordinates(0, 0)
   });
 
   it('has a world object', function(){
@@ -21,7 +22,12 @@ describe('EventFinder', function(){
   });
 
   it('takes user coordinates as argument and stores them', function(){
-    eventFinder.getUserCoordinates(0, 0)
     expect(eventFinder.userCoordinates).toEqual([0, 0])
   });
+
+  it('sorts generated events by proximity to user and retains the five nearest ones', function(){
+    eventFinder.closestEvents();
+    expect(eventFinder.eventCoordinates.length).toEqual(5)
+    expect(eventFinder.eventCoordinates[0].coordinateTotal).not.toBeGreaterThan(eventFinder.eventCoordinates[1].coordinateTotal)
+  })
 })

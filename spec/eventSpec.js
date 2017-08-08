@@ -27,7 +27,7 @@ describe('Event', function(){
   it('can return the cheapest ticket of the randomly generated set', function(){
     var cheapTicket = event.getCheapestTicket()
     expect(cheapTicket instanceof Ticket).toBeTrue
-    expect(cheapTicket.price).toBeGreaterThan(0)
-    expect(cheapTicket.price).toBeLessThan(50)
+    expect(cheapTicket).toBeGreaterThan(0)
+    expect(cheapTicket).toBeLessThan(50)
   });
 })
