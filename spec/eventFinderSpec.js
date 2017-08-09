@@ -18,7 +18,7 @@ describe('EventFinder', function(){
   });
 
   it('stores generated X and Y coordinates', function(){
-    expect(eventFinder.eventCoordinates.length).toEqual(10)
+    expect(eventFinder.eventInformation.length).toEqual(10)
   });
 
   it('takes user coordinates as argument and stores them', function(){
@@ -27,7 +27,7 @@ describe('EventFinder', function(){
 
   it('sorts generated events by proximity to user and retains the five nearest ones', function(){
     eventFinder.closestEvents();
-    expect(eventFinder.eventCoordinates.length).toEqual(5)
-    expect(eventFinder.eventCoordinates[0].coordinateTotal).not.toBeGreaterThan(eventFinder.eventCoordinates[1].coordinateTotal)
+    expect(eventFinder.eventInformation.length).toEqual(5)
+    expect(eventFinder.eventInformation[0].coordinateTotal).not.toBeGreaterThan(eventFinder.eventInformation[1].coordinateTotal)
   })
 })

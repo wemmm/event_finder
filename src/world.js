@@ -1,4 +1,4 @@
 function World() {
-  this.X_AXIS = 20
-  this.Y_AXIS = 20
+  this.X_AXIS = 10
+  this.Y_AXIS = 10
 }
