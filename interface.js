@@ -15,4 +15,8 @@ $(document).ready(function() {
     $('#fifthevent').text(eventfinder.returnEventList()[4])
     $('#sixthevent').text('Refresh the page for more events!')
   })
+
+  $('#logbutton').on('click', function() {
+    $('#log1').text(eventfinder.addUserCoords())
+  })
 })
