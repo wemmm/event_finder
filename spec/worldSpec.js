@@ -8,7 +8,7 @@ describe('World', function(){
   });
 
   it('stores the maximum X and Y axes', function(){
-    expect(world.X_AXIS).toEqual(20);
-    expect(world.X_AXIS).toEqual(20);
+    expect(world.X_AXIS).toEqual(10);
+    expect(world.X_AXIS).toEqual(10);
   });
 })
