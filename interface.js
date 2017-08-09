@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   $('#submitcoords').on('click', function() {
     eventfinder.getUserCoordinates($("#xcoord").val(), $("#ycoord").val())
-    $('#locationstatus').text(eventfinder.userCoordinates)
+    $('#locationstatus').text(`Your coordinates are: ${eventfinder.userCoordinates}`)
   })
 
   $('#findevents').on('click', function() {

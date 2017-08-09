@@ -17,12 +17,12 @@ EventFinder.prototype.generateEvents = function () {
 };
 
 EventFinder.prototype.randomXCoordinate = function () {
-  // return Math.floor(Math.random()*this.world.X_AXIS-1+1)
-  return Math.floor(Math.random()*21)-this.world.X_AXIS;
+  var coordTimesTwoMinusOne = (this.world.X_AXIS*2)-1
+  return Math.floor(Math.random()*coordTimesTwoMinusOne)-this.world.X_AXIS;
 };
 
 EventFinder.prototype.randomYCoordinate = function () {
-  // return Math.floor(Math.random()*this.world.Y_AXIS-1+1)
+  var coordTimesTwoMinusOne = (this.world.Y_AXIS*2)-1
   return Math.floor(Math.random()*21)-this.world.Y_AXIS;
 };
 
