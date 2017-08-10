@@ -23,7 +23,9 @@ A web app to help you find events (and their details) in your vicinity.
 * The boxes below the input will then show the five nearest events to your coordinates, plus their IDs, total tickets, cheapest tickets and distance from you.
 * If you would like to run the Jasmine tests for the code, open SpecRunner.html in your browser.
 
-Behind the scenes, the app uses four objects- tickets, events, worlds and eventfinders. A ticket instantiates with a random price, and an event instantiates with up to twenty tickets and randomised coordinates. The eventfinder instantiates with ten events, accepts user coordinates, then sorts its events by proximity to the user and presents them in a readable way. The world object originally contained a multidimensional array that stored events at random indexes corresponding to x and y coordinates, but I found that the locations and proximity can simply be calculated mathematically with no need for an 'actual' grid- so for now the world object simply stores constants dictating the maximum world size, which can be quite readily accessed and changed if desired.
+
+Behind the scenes, the app uses four objects- tickets, events, worlds and eventfinders. A ticket instantiates with a random price, and an event instantiates with up to twenty tickets and randomised coordinates. The eventfinder instantiates with ten events, accepts user coordinates, then sorts its events by proximity to the user and presents them in a readable way. The world object originally contained a multidimensional array that stored events at random indexes corresponding to x and y coordinates, but I found that the locations and proximity can simply be calculated mathematically with no need for an 'actual' grid- so for now the world object stores constants dictating the maximum world size, which can be quite readily accessed and changed if desired.
+
 
 ![frontend](https://github.com/wemmm/event_finder/blob/master/viagogotest.png)
 
